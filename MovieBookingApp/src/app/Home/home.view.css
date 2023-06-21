@@ -1,0 +1,29 @@
+#first{
+    position: fixed;
+    top: 380px;
+    left: 750px;
+    height: 30%;
+    width: 30%;
+}
+#thirdimage{
+    position: relative;
+    top:220px;
+
+}
+nav ul li{
+   padding:0px,70px,0,70px ;
+   margin-left: 25px;
+   margin-right: 15px;
+}
+#fourth{
+    position: fixed;
+    top:210px;
+    left:630px;
+    height: 400px;
+    width: 650px;
+}
+button{
+    background-color:wheat;
+    border: cornflowerblue;
+    float: right;
+}

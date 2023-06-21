@@ -1,0 +1,18 @@
+<div class="container mt-3">
+    <h1>Add Movie</h1>
+</div>
+<form class="form" [formGroup]="formValue">
+    <div class="form-group">
+        <div class="input-field mb-3">
+            <label for="moviename" class="form-label">Movie Name</label>
+            <input type="text" id="moviename" class="form-control" placeholder="Enter Movie Name" formControlName="movieName">
+            <label for="theatrename" class="form-label">Theatre Name</label>
+            <input type="text" id="theatrename" class="form-control" placeholder="Enter Theatre Name" formControlName="theatreName">
+            <label for="tickets" class="form-label">Tickets</label>
+            <input type="number" id="tickets" class="form-control" placeholder="Enter Number Only" formControlName="tickets">
+
+        </div>
+        <a routerLink=""><button type="submit" class="btn btn-success" (click)="AddMovie()">Submit</button></a>
+    </div>
+</form>
+<img id="image" alt="image load failed" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHg--oyW8LCcINSDAIW25Sr2eAyyzLNn-tKw&usqp=CAU">

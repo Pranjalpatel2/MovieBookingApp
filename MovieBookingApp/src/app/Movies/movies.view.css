@@ -1,0 +1,11 @@
+#image{
+    position: relative;
+    left: 995px;
+    top:20px;
+    height: 10%;
+    width: 10%;
+}
+table{
+    background-color:lightcyan;
+    margin-left: 10px;
+}

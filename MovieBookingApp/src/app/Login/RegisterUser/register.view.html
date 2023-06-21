@@ -1,0 +1,41 @@
+<div class="container">
+    <h3>Register User</h3>
+</div>
+<form>
+    <div class="form-group" [formGroup]="formValue">
+        <div class="input-field">
+            <label for="id" class="form-label">Id</label>
+            <input type="text" class="form-control" id="id" placeholder="Enter Login Id.." formControlName="id">
+            <small class="text-danger" *ngIf="formValue.controls['id'].dirty && formValue.hasError('required','id')">*Id is required</small>
+
+            <label for="firstName" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="firstName" placeholder="Enter First Name" formControlName="firstName">
+            <small class="text-danger" *ngIf="formValue.controls['firstName'].dirty && formValue.hasError('required','firstName')">*First Name is required</small>
+
+            <label for="lastName" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name" formControlName="lastName">
+            <small class="text-danger" *ngIf="formValue.controls['lastName'].dirty && formValue.hasError('required','lastName')">*Last Name is required</small>
+
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Enter Password" formControlName="password">
+            <small class="text-danger" *ngIf="formValue.controls['password'].dirty && formValue.hasError('required','password')">*Password is required</small>  
+
+            <label for="confirm" class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" id="confirm" placeholder="Confirm Password" formControlName="confirm">
+            <div *ngIf="((formValue.controls['password']==formValue.controls['confirm']) && (formValue.controls['password'].dirty && formValue.controls['confirm'].dirty))" class="form-text text-danger">
+                Password and Confirm password should be same.. 
+            </div>
+            <small class="text-danger" *ngIf="formValue.controls['confirm'].dirty && formValue.hasError('required','confirm')">*Confirm Password is required</small>
+
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter Valid Email-id" formControlName="email">
+            <small class="text-danger" *ngIf="formValue.controls['email'].dirty && formValue.hasError('required','email')">*Email is required and must be unique</small>
+
+            <label for="phone" class="form-label">Contact Number</label>
+            <input type="tel" class="form-control" id="phone" placeholder="Enter Phone Number" formControlName="phone">
+            <small class="text-danger" *ngIf="formValue.controls['phone'].dirty && formValue.hasError('required','phone')">*Contact is required</small>
+
+        </div>
+        <button type="submit" class="btn btn-success" [disabled]="formValue.invalid" (click)="Register()" id="register">Register</button>
+    </div>
+</form>

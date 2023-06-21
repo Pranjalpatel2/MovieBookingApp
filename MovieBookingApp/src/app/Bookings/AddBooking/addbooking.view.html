@@ -1,0 +1,43 @@
+<div class="container mt-5">
+    <h1>Add Booking</h1>
+</div>
+<div class="container">
+    <h3>You are booking ticket for {{Movie.movieName}} in {{Movie.theatreName}}<br>
+        Please fill below details to proceed the booking.. </h3>
+</div>
+<form  class="form" [formGroup]="formValue">
+    <div class="form-group">
+        <div class="input-field mb-3">
+            <label for="id" class="form-label">Id</label>
+            <input type="text" class="form-control" formControlName="id">
+           <!--<label for="MovieName" class="form-label">Movie Name</label>
+           <select id="MovieName" class="form-select" formControlName="movieName">
+            <option  *ngFor="let row of Movies">{{row.movieName}}</option>
+           </select>
+           <label for="theatrename" class="form-label">Theatre Name</label>
+           <select id="theatrename" class="form-select" formControlName="theatreName">
+            <option *ngFor="let row of Movies">{{row.theatreName}}</option>
+           </select>-->
+           <label for="seatno" class="form-label">Seat Number</label>
+           <select id="seatno" class="form-select" formControlName="seatNumber">
+            <option value="1001A01">1001A01</option>
+            <option value="1001A02">1001A02</option>
+            <option value="1001B01">1001B01</option>
+            <option value="1001B02">1001B02</option>
+            <option value="1001B03">1001B03</option>
+            <option value="1001B04">1001B04</option>
+           </select>
+           <!--Category, price-->
+           <label for="category" class="form-label">Seat Category</label>
+           <select id="category" class="form-select" formControlName="category">
+            <option value="">Select..</option>
+            <option value="Basic">Basic - Rs 200/-</option>
+            <option value="Silver">Silver - Rs 250/-</option>
+            <option value="Gold">Gold - Rs 350/-</option>
+            <option value="Diamond">Diamond - Rs 500/-</option>
+           </select>
+        </div>
+        <a routerLink="/booking"><button type="submit"class="btn-success btn btn-lg" (click)="Submit()">Submit</button></a>
+    </div>
+</form>
+<img id="image" alt="image load failed" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNDtu7OOCFyXrlYEnkbGaJyfq0E9t5kzizEQ&usqp=CAU">
