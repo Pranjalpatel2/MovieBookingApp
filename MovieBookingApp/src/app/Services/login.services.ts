@@ -10,6 +10,7 @@ export class LoginService {
     constructor(private http: HttpClient){}
 
     private url:string="https://localhost:44348/";
+    //private url:string="https://functionmoviebookingapp20230621151945.azurewebsites.net/";
 
     //https://localhost:44348/registerUser
     Register(user:User){
